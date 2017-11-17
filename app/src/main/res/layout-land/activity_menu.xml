@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nl.joepstraatman.restaurant.Menu"
+    android:weightSum="1"
+    android:background="@drawable/menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_weight=".2"
+        android:background="@drawable/menu"
+        >
+        <Button
+            android:text="&lt;   Home"
+            android:textSize="11sp"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/backButton"
+            android:onClick="goToIndex"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_marginStart="15dp"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:id="@+id/cat"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical"
+            android:text="FOUT"
+            android:textStyle="italic"
+            android:textSize="20sp"/>
+
+        <Button
+            android:text="Add to Order"
+            android:textSize="11sp"
+            android:textAllCaps="false"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/add"
+            android:onClick="saveToOrder"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:background="@drawable/menu"
+        android:layout_weight="0.7">
+
+        <ImageView
+            android:layout_width="300dip"
+            android:layout_gravity="center"
+            android:layout_height="300dip"
+            android:id="@+id/foto"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="0.9">
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/description" />
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:background="@drawable/menu"
+        android:weightSum="1.0"
+        >
+
+        <Button
+            android:text="Menu"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:id="@+id/homeMenu"
+            android:layout_weight="0.50"
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"/>
+
+        <Button
+            android:text="Your Order"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:id="@+id/order"
+            android:layout_weight="0.50"
+            android:background="@android:color/darker_gray"
+            android:onClick="openOrder" />
+    </LinearLayout>
+</LinearLayout>

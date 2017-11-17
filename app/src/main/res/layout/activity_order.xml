@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_order"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="nl.joepstraatman.restaurant.Order">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_weight=".1"
+        android:background="@drawable/menu"
+        android:layout_height="0dip">
+
+        <TextView
+            android:layout_marginStart="15dp"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:id="@+id/textview1"
+            android:layout_weight="0.75"
+            android:gravity="center_vertical"
+            android:text="Your Order"
+            android:textStyle="italic"
+            android:textSize="30sp"/>
+        <Button
+            android:text="Submit"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:id="@+id/submitter"
+            android:onClick="submit"
+            android:textColor="@color/colorPrimary"
+            android:background="@android:color/white"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/idorder"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight=".65">
+
+    </ListView>
+
+    <TextView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight=".10"
+        android:id="@+id/total"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical|right"
+        android:textColor="@android:color/holo_red_light"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.15"
+        android:background="@drawable/menu"
+        android:weightSum="1.0"
+        >
+
+        <Button
+            android:text="Menu"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:id="@+id/homeMenu"
+            android:layout_weight="0.50"
+            android:background="@android:color/darker_gray"
+            android:onClick="closeOrder" />
+
+        <Button
+            android:text="Your Order"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:id="@+id/order"
+            android:layout_weight="0.50"
+            android:textStyle="bold"
+            android:background="@color/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/foutje"
+            android:layout_weight="0.50" />
+    </LinearLayout>
+</LinearLayout>

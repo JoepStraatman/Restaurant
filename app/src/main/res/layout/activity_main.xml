@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nl.joepstraatman.restaurant.MainActivity"
+    android:weightSum="1.0"
+    android:background="@drawable/menu">
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:id="@+id/home"
+        android:layout_weight="0.95">
+    </ListView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:background="@drawable/menu"
+            android:weightSum="1.0"
+            >
+
+            <Button
+                android:text="Menu"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:id="@+id/homeMenu"
+                android:layout_weight="0.50"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"/>
+
+            <Button
+                android:text="Your Order"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:id="@+id/order"
+                android:layout_weight="0.50"
+                android:background="@android:color/darker_gray"
+                android:onClick="openOrder" />
+        </LinearLayout>
+</LinearLayout>
